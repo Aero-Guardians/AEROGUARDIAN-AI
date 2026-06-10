@@ -1,0 +1,64 @@
+{
+  "name": "Runway",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "length_m": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "closed",
+        "maintenance",
+        "inspection"
+      ],
+      "default": "active"
+    },
+    "surface_condition": {
+      "type": "string",
+      "enum": [
+        "dry",
+        "wet",
+        "icy",
+        "snow_covered",
+        "contaminated"
+      ],
+      "default": "dry"
+    },
+    "risk_score": {
+      "type": "number",
+      "default": 0
+    },
+    "last_inspection": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "heading": {
+      "type": "number"
+    },
+    "current_aircraft": {
+      "type": "string"
+    },
+    "operations_count": {
+      "type": "number",
+      "default": 0
+    },
+    "lighting_status": {
+      "type": "string",
+      "enum": [
+        "operational",
+        "partial",
+        "failed"
+      ],
+      "default": "operational"
+    }
+  },
+  "required": [
+    "name",
+    "length_m"
+  ]
+}
