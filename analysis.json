@@ -1,0 +1,64 @@
+{
+  "name": "DroneAnalysis",
+  "type": "object",
+  "properties": {
+    "drone_id": {
+      "type": "string"
+    },
+    "drone_name": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "low"
+    },
+    "detection_type": {
+      "type": "string",
+      "enum": [
+        "debris",
+        "crack",
+        "vehicle_intrusion",
+        "wildlife",
+        "surface_damage",
+        "foreign_object",
+        "lighting_issue",
+        "marking_fade"
+      ]
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "zone": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "acknowledged",
+        "resolved",
+        "false_alarm"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "drone_id",
+    "drone_name",
+    "findings",
+ 
