@@ -1,0 +1,47 @@
+{
+  "name": "SystemLog",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "info",
+        "warning",
+        "error",
+        "critical",
+        "debug"
+      ],
+      "default": "info"
+    },
+    "source": {
+      "type": "string"
+    },
+    "module": {
+      "type": "string",
+      "enum": [
+        "drone_control",
+        "navigation",
+        "sensors",
+        "computer_vision",
+        "alerts",
+        "dashboard",
+        "communication",
+        "safety",
+        "radar",
+        "vehicles"
+      ],
+      "default": "dashboard"
+    },
+    "details": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "message",
+    "level",
+    "source"
+  ]
+}
