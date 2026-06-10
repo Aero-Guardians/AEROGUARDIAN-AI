@@ -1,0 +1,34 @@
+{
+  "name": "AirportSettings",
+  "type": "object",
+  "properties": {
+    "airport_name": {
+      "type": "string",
+      "default": "International Airport"
+    },
+    "icao_code": {
+      "type": "string"
+    },
+    "iata_code": {
+      "type": "string"
+    },
+    "image_url_1": {
+      "type": "string"
+    },
+    "image_url_2": {
+      "type": "string"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "airport_name"
+  ]
+}
