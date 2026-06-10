@@ -1,0 +1,43 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "low"
+    },
+    "source": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "acknowledged",
+        "resolved"
+      ],
+      "default": "active"
+    },
+    "zone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "message",
+    "severity",
+    "source"
+  ]
+}
