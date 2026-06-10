@@ -1,0 +1,71 @@
+{
+  "name": "Drone",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "idle",
+        "in_flight",
+        "returning",
+        "charging",
+        "maintenance",
+        "emergency"
+      ],
+      "default": "idle"
+    },
+    "battery_level": {
+      "type": "number",
+      "default": 100
+    },
+    "altitude": {
+      "type": "number",
+      "default": 0
+    },
+    "speed": {
+      "type": "number",
+      "default": 0
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "current_mission": {
+      "type": "string"
+    },
+    "last_inspection": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "flight_hours": {
+      "type": "number",
+      "default": 0
+    },
+    "zone": {
+      "type": "string",
+      "enum": [
+        "runway_1",
+        "runway_2",
+        "taxiway_a",
+        "taxiway_b",
+        "perimeter_north",
+        "perimeter_south",
+        "terminal",
+        "hangar"
+      ],
+      "default": "hangar"
+    }
+  },
+  "required": [
+    "name",
+    "model"
+  ]
+}
