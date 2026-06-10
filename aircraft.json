@@ -1,0 +1,66 @@
+{
+  "name": "Aircraft",
+  "type": "object",
+  "properties": {
+    "callsign": {
+      "type": "string"
+    },
+    "airline": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "airborne",
+        "taxiing",
+        "parked",
+        "departing",
+        "arriving",
+        "maintenance"
+      ],
+      "default": "parked"
+    },
+    "health_score": {
+      "type": "number",
+      "default": 100
+    },
+    "gate": {
+      "type": "string"
+    },
+    "runway": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "number",
+      "default": 0
+    },
+    "anomalies": {
+      "type": "string"
+    },
+    "last_maintenance": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_maintenance": {
+      "type": "string",
+      "format": "date"
+    },
+    "engine_temp": {
+      "type": "number"
+    },
+    "fuel_level": {
+      "type": "number"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "callsign",
+    "airline",
+    "model"
+  ]
+}
