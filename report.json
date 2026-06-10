@@ -1,0 +1,64 @@
+{
+  "name": "EngineerReport",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "engineer_name": {
+      "type": "string"
+    },
+    "aircraft_callsign": {
+      "type": "string"
+    },
+    "report_type": {
+      "type": "string",
+      "enum": [
+        "routine_check",
+        "repair",
+        "inspection",
+        "emergency",
+        "overhaul"
+      ],
+      "default": "routine_check"
+    },
+    "description": {
+      "type": "string"
+    },
+    "parts_replaced": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "estimated_hours": {
+      "type": "number"
+    },
+    "actual_hours": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "engineer_name",
+    "report_type",
+    "description"
+  ]
+}
